@@ -124,7 +124,8 @@ section {
 #contact-icon {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
+  cursor: pointer;
 }
 
 #contact-icon i:hover {
