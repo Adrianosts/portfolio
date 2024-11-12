@@ -1,0 +1,256 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111111;
+  min-height: 100vh;
+}
+
+/* Animação por trás de todo o conteúdo */
+#particles-js {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: -2; 
+  pointer-events: none;
+}
+
+main {
+  flex: 1; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+
+/* Header */
+header {
+  width: 100%;
+  background-color: #111111;
+  position: fixed;
+  top: 0;
+  padding: 1rem 0;
+}
+
+.bi-header {
+  color: #00a3ff;
+  font-size: 2.5rem;
+  margin-left: 2rem;
+}
+
+/* Seções */
+section {
+  padding: 4rem 2rem;
+}
+
+/* Sobre */
+#about {
+  display: flex;
+  margin-top: 4.25rem;
+}
+
+#about h1 {
+  font-size: 1.9rem;
+  color: #00a3ff;
+  font-family: "Poppins", sans-serif;
+}
+
+#about h2 {
+  color: #828282;
+  font-size: 20px;
+  margin-bottom: 1.25rem;
+}
+
+#about p {
+  width: 76%;
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-family: "Archivo", sans-serif;
+}
+
+#about img {
+  width: 120px;
+  height: 100px;
+}
+
+#about a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#about button {
+  background-color: transparent;
+  color: #0087ce;
+  padding: 0.5rem 2rem;
+  border: solid 1px #0087ce;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1.25rem;
+  font-size: 1.2rem;
+  animation: pulse 1.5s infinite;
+}
+
+#about button:hover {
+  background-color: #0087ce;
+  color: #ffffff;
+}
+
+/* Habilidades */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.icon {
+  height: 64px;
+  transition: opacity 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  opacity: 0.7;
+  transform: translateY(-7px);
+}
+
+/* Icons Rede Sociais */
+#contact-icon {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+#contact-icon i:hover {
+  opacity: 0.7;
+}
+
+.bi {
+  color: #00a3ff;
+  font-size: 2.5rem;
+}
+
+/* Formulário */
+#contact h2  {
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  font-family: "Archivo", sans-serif;
+  margin-bottom: 10px;
+}
+#contactForm {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#contactForm label,
+#contactForm input,
+#contactForm textarea,
+#contactForm button {
+  margin-bottom: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+#contactForm input {
+  padding: 8px;
+}
+
+#contactForm label {
+  color: #ffffff;
+}
+
+#contactForm textarea {
+  padding: 5px 10px;
+  resize: none;
+  overflow-y: auto;
+  height: 100px;
+}
+
+#contactForm button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#contactForm button:hover {
+  background-color: #0069d9;
+}
+
+#contactForm button:disabled {
+  background-color: #cccccc;
+  color: #000000;
+  cursor: not-allowed;
+}
+
+#responseMessage {
+  font-size: 0.9rem;
+  text-align: center;
+  color: green;
+  margin-top: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Footer */
+footer {
+  color: #868383;
+  padding: 1rem 0;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Responsivo */
+@media only screen and (max-width: 468px) {
+  #myself {
+    width: 100% !important;
+  }
+
+  #about p {
+    width: 100%;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .bi {
+    color: #00a3ff;
+    font-size: 2rem;
+  }
+
+  footer {
+    p {
+      font-size: 0.8rem;
+      font-family: "Poppins", sans-serif;
+    }
+  }
+}
+
+/* Animações */
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+
+
+
+
