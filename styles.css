@@ -17,17 +17,16 @@ body {
   height: 100vh;
   top: 0;
   left: 0;
-  z-index: -2; 
+  z-index: -2;
   pointer-events: none;
 }
 
 main {
-  flex: 1; 
+  flex: 1;
   display: flex;
   flex-direction: column;
-  min-height: 100vh; 
+  min-height: 100vh;
 }
-
 
 /* Header */
 header {
@@ -56,18 +55,32 @@ section {
 }
 
 #about h1 {
-  font-size: 1.9rem;
+  font-size: 2.5rem;
   color: #00a3ff;
   font-family: "Poppins", sans-serif;
+  margin-top: 20px;
+  line-height: 0.6;
 }
 
 #about h2 {
   color: #828282;
   font-size: 20px;
-  margin-bottom: 1.25rem;
 }
 
-#about p {
+#about-me {
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+  font-family: "Poppins", sans-serif;
+  color: #828282;
+  font-weight: bold;
+}
+
+#about p a {
+  color: #00a3ff;
+  font-weight: bold;
+}
+
+.about-text {
   width: 76%;
   color: #ffffff;
   font-size: 1.5rem;
@@ -93,7 +106,6 @@ section {
   cursor: pointer;
   margin-top: 1.25rem;
   font-size: 1.2rem;
-  animation: pulse 1.5s infinite;
 }
 
 #about button:hover {
@@ -102,22 +114,26 @@ section {
 }
 
 /* Habilidades */
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
+/* Estilo para o Carrossel */
+.carousel {
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.carousel-track {
+  display: inline-flex;
+  animation: scroll-infinite 10s linear infinite;
 }
 
 .icon {
-  height: 64px;
-  transition: opacity 0.3s ease;
-  transition: transform 0.3s ease;
-}
-
-.icon:hover {
-  opacity: 0.7;
-  transform: translateY(-7px);
+  flex: 0 0 auto;
+  width: 5rem;
+  height: 5rem;
+  margin: 0 30px;
+  object-fit: contain;
 }
 
 /* Icons Rede Sociais */
@@ -138,7 +154,7 @@ section {
 }
 
 /* Formulário */
-#contact h2  {
+#contact h2 {
   text-transform: uppercase;
   text-align: center;
   color: #ffffff;
@@ -148,7 +164,7 @@ section {
 #contactForm {
   display: flex;
   flex-direction: column;
-  max-width: 500px;
+  max-width: 31.25rem;
   margin: 0 auto;
 }
 
@@ -156,8 +172,8 @@ section {
 #contactForm input,
 #contactForm textarea,
 #contactForm button {
-  margin-bottom: 10px;
-  font-family: 'Poppins', sans-serif;
+  margin-bottom: .625rem;
+  font-family: "Poppins", sans-serif;
 }
 
 #contactForm input {
@@ -172,7 +188,7 @@ section {
   padding: 5px 10px;
   resize: none;
   overflow-y: auto;
-  height: 100px;
+  height: 6.25rem;
 }
 
 #contactForm button {
@@ -198,8 +214,8 @@ section {
   font-size: 0.9rem;
   text-align: center;
   color: green;
-  margin-top: 10px;
-  font-family: 'Poppins', sans-serif;
+  margin-top: .625rem;
+  font-family: "Poppins", sans-serif;
 }
 
 /* Footer */
@@ -208,6 +224,16 @@ footer {
   padding: 1rem 0;
   text-align: center;
   font-family: "Poppins", sans-serif;
+}
+
+/* Animação para mover os ícones */
+@keyframes scroll-infinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* Responsivo */
@@ -220,9 +246,24 @@ footer {
     width: 100%;
   }
 
+  #about-me {
+    line-height: 0.9;
+    margin-top: 1.25rem;
+  }
   .icon {
-    width: 40px;
-    height: 40px;
+    width: 3.125rem;
+    height: 3.125rem;
+    flex: 0 0 auto;
+    margin: 0 1.25rem;
+    object-fit: contain;
+  }
+
+  .carousel {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
   }
 
   .bi {
@@ -237,21 +278,3 @@ footer {
     }
   }
 }
-
-/* Animações */
-@keyframes pulse {
-  0% {
-    transform: scale(0.9);
-  }
-  50% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(0.9);
-  }
-}
-
-
-
-
-
